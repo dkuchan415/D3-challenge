@@ -66,7 +66,7 @@ d3.csv("/assets/data/data.csv").then(function(healthdata) {
         .attr("cx", d => xLinearScale(d.smokes))
         .attr("cy", d => yLinearScale(d.obesity))
         .attr("r", "15")
-        .attr("fill", "grey")
+        .attr("fill", "teal")
         .attr("opacity", ".5");
 
     var text = chartGroup.selectAll(null)
@@ -85,7 +85,7 @@ d3.csv("/assets/data/data.csv").then(function(healthdata) {
 
     chartGroup.append("text")
     .attr("transform", "rotate(-90)")
-    .attr("y", 0 - margin.left + 40)
+    .attr("y", 0 - margin.left + 45)
     .attr("x", 0 - (height / 2))
     .attr("dy", "0em")
     .attr("class", "axisText")
@@ -95,7 +95,7 @@ d3.csv("/assets/data/data.csv").then(function(healthdata) {
     //x Axis text
 
     chartGroup.append("text")
-    .attr("y", height + margin.top +20)
+    .attr("y", height + margin.bottom -10)
     .attr("x", (width / 2))
     .attr("dx", "0em")
     .attr("class", "axisText")
